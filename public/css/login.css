@@ -1,0 +1,83 @@
+.login * {
+  box-sizing: border-box;
+  color: #ffffff;
+  margin: 0;
+}
+.login {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("https://cdn.pixabay.com/photo/2019/05/01/10/20/blossom-4170450_1280.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.login .form-login {
+  width: 500px;
+  padding: 2rem;
+  border-radius: 1rem;
+}
+.login .form-login .header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.login .form-login .input {
+  padding: 0.5rem;
+}
+.login .form-login .input input.form-control:hover,
+.login .form-login .input input.form-control {
+  border: none !important;
+  box-shadow: none !important;
+  border-radius: 0 !important;
+  background: none !important;
+  border-bottom: 1px solid #ffffff !important;
+  color: #ffffff !important;
+}
+.login .form-login .input input.form-control::placeholder {
+  color: rgba(255, 255, 255, 0.7) !important;
+}
+.login .form-login .control {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login .form-login .control button {
+  width: 98%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border: none;
+  background-color: rgba(255, 255, 100, 1);
+  color: #000000;
+  transition: all 0.4s ease;
+}
+.login .form-login .control button:hover {
+  width: 100%;
+}
+.login .form-login .control p {
+  display: flex;
+  align-items: center;
+}
+.login .form-login .control p a {
+  font-size: 1.2rem;
+  margin: 0 0.25rem 0 0.25rem;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .login {
+      background: none;
+    }
+    .login .form-login {
+      width: 100vw;
+      height: 100vh;
+      border-radius: 0;
+    }
+    .login .form-login .control p {
+        font-size: 0.8rem;
+    }
+    .login .form-login .control p a {
+        font-size: 1rem;
+    }
+  }

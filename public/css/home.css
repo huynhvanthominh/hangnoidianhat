@@ -1,0 +1,52 @@
+.banner-carousel {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  flex-grow: 1;
+}
+.banner {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin-left: 2rem;
+  justify-content: space-around;
+  background-color: #fafafa;
+}
+.banner .banner-item {
+  width: 300px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.banner .banner-item img {
+  width: 100%;
+  height: 100%;
+}
+.carousel-item .item {
+  height: 450px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.carousel-item .item img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.carousel-control-next-custom,
+.carousel-control-prev-custom {
+  position: absolute;
+  top: 50%;
+  background: none;
+  border: none;
+  opacity: 0.5;
+}
+.carousel-control-next-custom {
+  right: 0;
+}
+.carousel-control-prev-custom {
+  left: 0;
+}
+.carousel-control-next-custom:hover,
+.carousel-control-prev-custom:hover {
+  opacity: 1;
+}

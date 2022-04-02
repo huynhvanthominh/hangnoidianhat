@@ -1,0 +1,104 @@
+.detail * {
+  box-sizing: border-box;
+}
+.detail img {
+  max-width: 100%;
+  max-height: 100%;
+}
+.detail .main {
+  display: flex;
+}
+.detail .main .content-img {
+  min-width: 800px;
+  height: 500px;
+  margin-right: 0.5rem;
+  display: flex;
+  flex-direction: column;
+}
+.detail .main .content-img .main-img {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.detail .main .content-img .children-img {
+  margin-top: 0.25rem;
+  width: 100%;
+  height: 200px;
+  display: flex;
+  flex-direction: row;
+  overflow: hidden;
+}
+.detail .main .content-img .children-img button.item-img {
+  width: calc(25% - 0.5rem);
+  flex-shrink: 0;
+  background: none;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin: 0.25rem;
+}
+
+.detail .main .content-img .children-img .item-img img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.detail .main .content-inf {
+  padding: 0.5rem;
+  flex-grow: 1;
+}
+.detail .main .content-inf .title h1 {
+  color: rgba(0, 0, 255, 1);
+}
+.detail .main .content-inf .price {
+  color: rgba(255, 0, 0, 1);
+  font-weight: 800;
+}
+.detail .main .content-inf .description .item{
+    padding-left: 1rem;
+}
+.detail .main .content-inf .description .item .icon {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  background-image: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%221rem%22%20height%3D%221rem%22%20viewBox%3D%220%200%20512%20512%22%3E%3C!--!%20Font%20Awesome%20Free%206.0.0%20by%20%40fontawesome%20-%20https%3A%2F%2Ffontawesome.com%20License%20-%20https%3A%2F%2Ffontawesome.com%2Flicense%2Ffree%20(Icons%3A%20CC%20BY%204.0%2C%20Fonts%3A%20SIL%20OFL%201.1%2C%20Code%3A%20MIT%20License)%20Copyright%202022%20Fonticons%2C%20Inc.%20--%3E%3Cpath%20d%3D%22M152%200H154.2C186.1%200%20215.7%2016.91%20231.9%2044.45L256%2085.46L280.1%2044.45C296.3%2016.91%20325.9%200%20357.8%200H360C408.6%200%20448%2039.4%20448%2088C448%20102.4%20444.5%20115.1%20438.4%20128H480C497.7%20128%20512%20142.3%20512%20160V224C512%20241.7%20497.7%20256%20480%20256H32C14.33%20256%200%20241.7%200%20224V160C0%20142.3%2014.33%20128%2032%20128H73.6C67.46%20115.1%2064%20102.4%2064%2088C64%2039.4%20103.4%200%20152%200zM190.5%2068.78C182.9%2055.91%20169.1%2048%20154.2%2048H152C129.9%2048%20112%2065.91%20112%2088C112%20110.1%20129.9%20128%20152%20128H225.3L190.5%2068.78zM360%2048H357.8C342.9%2048%20329.1%2055.91%20321.5%2068.78L286.7%20128H360C382.1%20128%20400%20110.1%20400%2088C400%2065.91%20382.1%2048%20360%2048V48zM32%20288H224V512H80C53.49%20512%2032%20490.5%2032%20464V288zM288%20512V288H480V464C480%20490.5%20458.5%20512%20432%20512H288z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+}
+.detail .main .content-inf .amount {
+  display: flex;
+  align-items: center;
+}
+.detail .main .content-inf .amount button {
+  background: rgba(0, 100, 255, 0.7);
+  border: none;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 0 !important;
+}
+.detail .main .content-inf .amount button.minus {
+  border-top-left-radius: 0.5rem !important;
+  border-bottom-left-radius: 0.5rem !important;
+}
+.detail .main .content-inf .amount button.plus {
+  border-top-right-radius: 0.5rem !important;
+  border-bottom-right-radius: 0.5rem !important;
+}
+.detail .main .content-inf .amount input {
+  width: 50px;
+  text-align: center;
+  border-radius: 0 !important;
+}
+.detail .main .content-inf .control {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (max-width: 1140px) {
+  .detail .main {
+    flex-direction: column;
+  }
+  .detail .main .content-img {
+    min-width: 100%;
+  }
+}

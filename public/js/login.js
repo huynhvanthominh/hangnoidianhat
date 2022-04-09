@@ -1,19 +1,27 @@
 $(document).ready(function () {
-  setTitle("Login");
+
+  setTitle("Đăng nhập");
+
+  const error = $('.login .error')
+  const span = $('.login .error span')
+  const username = $(".login #username");
+  const password = $(".login #password");
+
+
   $(".login #btnLogin").click(() => {
-    const username = $(".login #username").val();
-    const password = $(".login #password").val();
-    if (checkLogin(username, password)) {
+    if (checkLogin(username.val(), password.val())) {
       $.post(
         urlAjax("users", "getUsersByUsernameAndPassword"),
         {
-          username: username,
-          password: password,
+          username: username.val(),
+          password: password.val(),
         },
         (result) => {
           const data = JSON.parse(result)
-          if(data.length > 0){
-            location.assign("home")
+          if (data.login) {
+            location.replace("home")
+          } else {
+            showError(data.message)
           }
         }
       );
@@ -21,10 +29,11 @@ $(document).ready(function () {
   });
   const checkLogin = (username, password) => {
     if (username.length == 0) {
-      alert("Vui lòng nhập tài khoản");
+      showError("Vui lòng nhập tài khoản!");
       return false;
     }
     if (password.length == 0) {
+      showError("Vui lòng nhập mật khẩu!");
       return false;
     }
     return true;
@@ -36,11 +45,29 @@ $(document).ready(function () {
   $(".login #password").keypress((e) => {
     handleKeyPressEnter(e);
   });
-  
+
   const handleKeyPressEnter = (e) => {
     if (e.keyCode === 13) {
       e.preventDefault();
       $(".login #btnLogin").click();
     }
   };
+
+  username.change(function(){
+    hideError()
+  })
+
+  password.change(function(){
+    hideError()
+  })
+
+  const showError = (err) => {
+    span.html(err);
+    error.css("display", "block");
+  }
+
+  const hideError = () => {
+    span.html("");
+    error.css("display", "none");
+  }
 });

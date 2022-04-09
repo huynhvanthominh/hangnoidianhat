@@ -1,6 +1,6 @@
 $(document).ready(function () {
   const heightHeader = $(".header").height();
-  let isShowMenu = true;
+  let isShowMenu = false;
 
   $(".header .menu-lg").css("top", `${heightHeader}px`);
 
@@ -23,10 +23,12 @@ $(document).ready(function () {
     const id = this.getAttribute("data-bs-toggle");
     if (className === "iconUp") {
       span.attr("class", "iconDown")
-      $(id).css("animation-name", "showSubmenu");
+      $(id).css("display", "block");
+      // $(id).css("animation-name", "showSubmenu");
     } else if (className === "iconDown") {
       span.attr("class", "iconUp")
-      $(id).css("animation-name", "closeSubmenu");
+      $(id).css("display", "none");
+      // $(id).css("animation-name", "closeSubmenu");
     }
   });
 });

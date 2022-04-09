@@ -22,6 +22,11 @@ class pages extends controller {
         $this->view(CUSTOMERS, "", "login");
     }
 
+    public function register()
+    {
+        $this->view(CUSTOMERS, "", "register");
+    }
+
     public function logout()
     {       
         if(isset($_SESSION[NAMEWEBSITE]["author"])){

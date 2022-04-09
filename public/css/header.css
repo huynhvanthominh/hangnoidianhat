@@ -6,6 +6,7 @@
   left: 0;
   right: 0;
   z-index: 999;
+  height: 3rem;
 }
 .header ul,
 .header li {
@@ -20,6 +21,14 @@
 .header .btn-show-menu {
   background: none;
   border: none;
+}
+.header .logo{
+  max-width: 2.5rem;
+  max-height: 2.5rem;
+}
+.header-item img{
+  max-width: 100%;
+  max-height: 100%;
 }
 .header .menu {
   display: flex;
@@ -75,7 +84,7 @@
     background-color: #fafafa;
     min-width: 200px;
     z-index: 999;
-    /* transform: translateX(-100%); */
+    transform: translateX(-100%);
     animation-duration: 0.7s;
     animation-fill-mode: forwards;
     padding: 0 3rem 0 0.5rem;
@@ -94,19 +103,18 @@
 
   .header .menu-lg .menu-lg-item .sub-menu-lg {
     padding-left: 1rem;
-    animation-name: showSubmenu;
+    /* animation-name: showSubmenu; */
+    display: none;
     animation-duration: 1s;
     animation-fill-mode: forwards;
     
   }
   @keyframes showSubmenu {
     from {
-      display: none;
       transform: translateY(-100%);
     }
     to {
       transform: translateY(0%);
-      display: block;
     }
   }
   @keyframes closeSubmenu {

@@ -2,5 +2,5 @@
 define("HOSTNAME", "localhost");
 define("USERNAME", "root");
 define("PASSWORD", "");
-define("DATABASE", "shopmypham");
+define("DATABASE", "hangnoidianhat");
 define("CHARSET", "utf8");

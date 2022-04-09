@@ -2,7 +2,6 @@
 if(session_status() !== 2){
     session_start();
 }
-// var_dump($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -22,6 +21,7 @@ if(session_status() !== 2){
 
 <body>
     <?php
+    require_once "./src/config/link-folder.php";
     $layout = isset($_REQUEST['layout']) ? $_REQUEST['layout'] : 'customers';
     if (strcasecmp($layout, "customers") === 0) {
         require_once "./src/mvc/views/customers/index.php";

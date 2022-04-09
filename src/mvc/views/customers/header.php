@@ -14,7 +14,7 @@
                 <ul class="menu-lg-main">
                     <li class="menu-lg-item">
                         <a href="home">
-                            <!-- <img src="./public/images/logo-hangnoidianhat.jpg" alt=""> -->
+                            <img src="./public/images/logo.png" class="logo">
                         </a>
                     </li>
                     <li class="menu-lg-item">
@@ -65,7 +65,7 @@
             <ul class="menu d-lg-flex d-none">
                 <li>
                     <a href="home" class="header-item">
-                        <!-- <img src="./public/images/logo-hangnoidianhat.jpg" alt=""> -->
+                        <img src="./public/images/logo.png" class="logo">
                     </a>
                 </li>
                 <li>

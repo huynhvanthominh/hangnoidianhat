@@ -1,11 +1,11 @@
 <?php
-require "./src/config/link-folder.php";
+// require "./src/config/link-folder.php";
 class controller
 {
     public function model($model)
     {
         $path = MODELS . "$model.php";
-        
+
         if (file_exists($path)) {
             require_once MODELS . "database.php";
             require_once "./src/mvc/models/$model.php";

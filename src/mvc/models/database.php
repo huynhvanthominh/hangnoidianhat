@@ -17,7 +17,7 @@ class database
         return $conn;
     }
 
-    protected function select($query, $parameter)
+    protected function select($query, $parameter = null)
     {
         $data = [];
         $conn = $this->connect();
@@ -33,6 +33,20 @@ class database
             }
         }
         return $data;
+    }
+
+    protected function save($query, $parameter){
+        $row = -1;
+        $conn = $this->connect();
+        $stmt = $conn->prepare($query);
+        if($stmt){
+            if(mysqli_stmt_bind_param($stmt, $this->getTypeParameter($parameter), ...$parameter)){
+                if(mysqli_stmt_execute($stmt)){
+                    $row = $stmt->affected_rows;
+                }
+            } 
+        }
+        return $row;
     }
 
     protected function getTypeParameter($parameter)

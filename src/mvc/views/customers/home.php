@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container mt-5 pt-5">
     <div class="d-flex">
         <div class="banner-carousel py-2 px-2">
             <div id="banner" class="carousel slide" data-bs-ride="carousel">
